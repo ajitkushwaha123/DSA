@@ -1,21 +1,28 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int arr[]= {3,1,2,4,0,6};
+    int n;
+    cin>>n;
+    int A[n];
 
-    int targetSum = 10;
+    for(int i= 0 ; i<n ; i++){
+        cin>>A[i];
+    }
+
+    int X = 13;
 
     int count = 0;
 
-    for(int i=0 ; i<5; i++){
-        for(int j = i+1 ; j<5 ; j++){
-            for(int k = j+1 ; k<5 ; k++){
-                if(arr[i] + arr[j] + arr[k] == targetSum){
-                    count++;
+    int result = 0;
+        for(int i = 0 ; i<n ; i++){
+            for(int j=i+1 ; j<n ; j++){
+                for(int k = j+1 ; k<n ; k++){
+                    if(A[i] + A[j] + A[k] == X){
+                      result = result + 1;
+                    }
                 }
+            }
         }
-        }
-    }
-
-    cout<<count;
+        
+     cout<<result;
 }
