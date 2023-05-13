@@ -1,27 +1,27 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    int n;
-    cin>>n;
 
-    int arr[n];
-    for(int i =0; i<n ; i++){
-        cin>>arr[i];
-    }
+int main() {
+	int arr[4];
+	
+	for(int i = 0; i<4; i++){
+	    cin>>arr[i];
+	}
 
-    
-    int k;
-    cin>>k;
+    for(int i = 0; i<4; i++){
+	    cout<<arr[i]<<endl;
+	}
+	
+	int count = 0;
+	
+	for(int i = 0; i<4; i++){
+	    if(arr[i]>=10){
+	        count++;
+	    }
+	}
+	
+    cout<<count;
 
-    int result = -1;
-        for(int i =0 ; i<=n; i++){
-            if(arr[i] == k){
-                result = 1;
-            }
-        }
-        
-        cout<<result;
+	return 0
+    ;
 }
-
-
-
